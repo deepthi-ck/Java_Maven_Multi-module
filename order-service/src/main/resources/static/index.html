@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview | Modula Desk</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="brand-mark">MD</div>
+        <div class="brand">Modula Desk<span>Java Maven Multi-module</span></div>
+        <nav class="nav">
+          <a href="/index.html">Overview</a>
+          <a href="/products.html">Products</a>
+          <a href="/orders.html">Orders</a>
+          <a href="/modules.html">Module Health</a>
+        </nav>
+        <div class="nav-meta">Console on order-service :8083 · product-service :8082 · shared common module</div>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="topbar">
+        <div>
+          <h1>Overview</h1>
+          <p class="subtitle">Operate the Maven multi-module commerce stack from the order-service console. Product calls are proxied to the sibling module.</p>
+        </div>
+        <div class="badge" id="runtime-badge">Checking modules…</div>
+      </div>
+      <div id="flash" class="flash" role="status"></div>
+      <div class="card hero-panel" style="margin-bottom:20px;">
+        <h2>Multi-module operations desk</h2>
+        <p>Publish SKUs in product-service, then place orders that resolve pricing across the module boundary — all from one built-in Spring Boot static UI.</p>
+        <div class="actions hero-actions">
+          <a class="btn" href="/products.html">Publish a product</a>
+          <a class="btn secondary" href="/orders.html">Place an order</a>
+          <a class="btn secondary" href="/modules.html">Check module health</a>
+        </div>
+      </div>
+      <div id="dashboard-stats" class="grid stats"></div>
+      <div class="grid two">
+        <div class="card">
+          <h2>Quick navigation</h2>
+          <div class="actions">
+            <a class="btn" href="/products.html">Products</a>
+            <a class="btn secondary" href="/orders.html">Orders</a>
+            <a class="btn secondary" href="/modules.html">Module Health</a>
+          </div>
+          <p class="footer-note">Use the left menu for full page-to-page navigation across the desk.</p>
+        </div>
+        <div class="card">
+          <h2>Live module probes</h2>
+          <div id="service-probes" class="service-list"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
