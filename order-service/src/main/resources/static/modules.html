@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module Health | Modula Desk</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="brand-mark">MD</div>
+        <div class="brand">Modula Desk<span>Java Maven Multi-module</span></div>
+        <nav class="nav">
+          <a href="/index.html">Overview</a>
+          <a href="/products.html">Products</a>
+          <a href="/orders.html">Orders</a>
+          <a href="/modules.html">Module Health</a>
+        </nav>
+        <div class="nav-meta">Actuator + product proxy probes</div>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="topbar">
+        <div>
+          <h1>Module Health</h1>
+          <p class="subtitle">Confirm order-service health and that the product module answers through the same-origin product facade.</p>
+        </div>
+        <div class="badge" id="runtime-badge">Checking modules…</div>
+      </div>
+      <div id="flash" class="flash" role="status"></div>
+      <div class="grid two">
+        <div class="card">
+          <h2>Order-service runtime</h2>
+          <div id="topology-gateway" class="empty">Loading actuator health…</div>
+        </div>
+        <div class="card">
+          <h2>Module route status</h2>
+          <div id="topology-routes" class="service-list"></div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h2>Architecture map</h2>
+        <p class="subtitle" style="margin:0 0 14px;">Browser → order-service <span class="mono">:8083</span> → product-service <span class="mono">:8082</span> · shared <span class="mono">common</span> library</p>
+        <div class="actions">
+          <a class="btn" href="/index.html">Back to overview</a>
+          <a class="btn secondary" href="http://localhost:8082/actuator/health" target="_blank" rel="noopener">Open product actuator</a>
+        </div>
+      </div>
+      <p class="footer-note"><a href="/products.html">Products</a> · <a href="/orders.html">Orders</a></p>
+    </main>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
